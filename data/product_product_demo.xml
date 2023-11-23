@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+
+    <record id="product_1" model="product.product"
+            forcecreate="True">
+        <field name="name">Desk q</field>
+        <field name="quantity">14</field>
+        <field name="price">1000</field>
+
+        <!--        <field name="attribute_value_ids" eval="[Command.set([ref('product_catalog.attribute_value_1'), ...])]"/>-->
+        <!--        <field name="category_id" ref="patient_1"></field>-->
+        <!--        <field name="field_name" type="base64" file="path_to_file_from_module_dir"/>-->
+    </record>
+
+</odoo>
