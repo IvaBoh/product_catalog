@@ -32,6 +32,18 @@
         </field>
     </record>
 
+    <record id="product_attribute_value_view_search" model="ir.ui.view">
+        <field name="name">product.attribute.value.view.search</field>
+        <field name="model">product.attribute.value</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="attribute_id"/>
+                <filter name="groupby_attribute" string="Attribute"
+                        context="{'group_by': 'attribute_id'}"/>
+            </search>
+        </field>
+    </record>
+
     <record id="product_attribute_value_action"
             model="ir.actions.act_window">
         <field name="name">Attribute value</field>
@@ -43,6 +55,6 @@
               name="Attribute value"
               parent="product_catalog_main_menu"
               action="product_attribute_value_action"
-              sequence="10"/>
+              sequence="20"/>
 
 </odoo>

@@ -1,5 +1,5 @@
 from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
+from odoo.exceptions import ValidationError, UserError
 
 
 class ProductCategory(models.Model):
@@ -31,7 +31,7 @@ class ProductCategory(models.Model):
         index=True,
         ondelete="cascade",
     )
-    child_id = fields.One2many(
+    child_ids = fields.One2many(
         comodel_name="product.category",
         inverse_name="parent_id",
         string="Child Categories",
@@ -70,6 +70,17 @@ class ProductCategory(models.Model):
     def _check_category_recursion(self):
         if not self._check_recursion():
             raise ValidationError(_("You cannot create recursive categories."))
+
+    @api.ondelete(at_uninstall=False)
+    def _unlink_disabled_if_product(self):
+        for category in self:
+            if category.product_count > 0:
+                raise UserError(
+                    _(
+                        "You cannot delete this category, "
+                        "because it contains linked products."
+                    )
+                )
 
     @api.model
     def name_create(self, name):

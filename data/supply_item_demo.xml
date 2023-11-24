@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="supply_item_1" model="supply.item"
+            forcecreate="True">
+        <field name="product_id" ref="game_chair"/>
+        <field name="quantity">15</field>
+    </record>
+
+    <record id="supply_item_2" model="supply.item"
+            forcecreate="True">
+        <field name="product_id" ref="desk_chair"/>
+        <field name="quantity">3</field>
+    </record>
+
+    <record id="supply_item_3" model="supply.item"
+            forcecreate="True">
+        <field name="product_id" ref="arm_chair"/>
+        <field name="quantity">8</field>
+    </record>
+
+    <record id="supply_item_4" model="supply.item"
+            forcecreate="True">
+        <field name="product_id" ref="dining_table"/>
+        <field name="quantity">5</field>
+    </record>
+
+    <record id="supply_item_5" model="supply.item"
+            forcecreate="True">
+        <field name="product_id" ref="desk_table"/>
+        <field name="quantity">11</field>
+    </record>
+
+</odoo>

@@ -30,6 +30,16 @@
         </field>
     </record>
 
+    <record id="product_attribute_view_search" model="ir.ui.view">
+        <field name="name">product.attribute.view.search</field>
+        <field name="model">product.attribute</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="value_ids"/>
+            </search>
+        </field>
+    </record>
+
     <record id="product_attribute_action"
             model="ir.actions.act_window">
         <field name="name">Attributes</field>

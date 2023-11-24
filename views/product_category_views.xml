@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_category_view_form"
+            model="ir.ui.view">
+        <field name="name">product.category.view.form</field>
+        <field name="model">product.category</field>
+        <field name="arch" type="xml">
+            <form string="Categories">
+                <sheet>
+                    <group name="Category"
+                           string="Category Information">
+                        <field name="name"/>
+                        <field name="parent_id"/>
+                        <field name="complete_name"/>
+                        <field name="product_count"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_category_view_tree"
+            model="ir.ui.view">
+        <field name="name">product.category.view.tree</field>
+        <field name="model">product.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="complete_name"/>
+                <field name="product_count"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_category_view_search" model="ir.ui.view">
+        <field name="name">product.category.view.search</field>
+        <field name="model">product.category</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="parent_id"/>
+                <field name="child_ids"/>
+                <searchpanel view_types="tree">
+                    <field name="parent_id" hierarchize="1"
+                           enable_counters="1"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+    <record id="product_category_action"
+            model="ir.actions.act_window">
+        <field name="name">Categories</field>
+        <field name="res_model">product.category</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+    <menuitem id="product_category_menu"
+              name="Categories"
+              parent="product_catalog_main_menu"
+              action="product_category_action"
+              sequence="30"/>
+
+</odoo>

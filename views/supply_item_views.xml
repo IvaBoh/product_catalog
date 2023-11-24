@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="supply_item_view_form"
+            model="ir.ui.view">
+        <field name="name">supply.item.view.form</field>
+        <field name="model">supply.item</field>
+        <field name="arch" type="xml">
+            <form string="Supply item">
+                <sheet>
+                    <group name="Supply item"
+                           string="Supply item">
+                        <field name="quantity"/>
+                        <field name="product_id"/>
+                        <field name="case_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="supply_item_view_tree"
+            model="ir.ui.view">
+        <field name="name">supply.item.view.tree</field>
+        <field name="model">supply.item</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="product_id"/>
+                <field name="quantity"/>
+                <field name="case_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="supply_item_view_search" model="ir.ui.view">
+        <field name="name">supply.item.view.search</field>
+        <field name="model">supply.item</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="product_id"/>
+                <filter name="groupby_case" string="Supply case"
+                        context="{'group_by': 'case_id'}"/>
+                <searchpanel view_types="tree">
+                    <field name="case_id" select="multi" enable_counters="1"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+    <record id="supply_item_action"
+            model="ir.actions.act_window">
+        <field name="name">Supply Items</field>
+        <field name="res_model">supply.item</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+    <menuitem id="supply_item_menu"
+              name="Supply Items"
+              parent="product_catalog_main_menu"
+              action="supply_item_action"
+              sequence="80"/>
+
+</odoo>

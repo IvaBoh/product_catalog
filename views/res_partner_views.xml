@@ -79,6 +79,6 @@
               name="Suppliers"
               parent="product_catalog_main_menu"
               action="res_partner_action"
-              sequence="10"/>
+              sequence="60"/>
 
 </odoo>

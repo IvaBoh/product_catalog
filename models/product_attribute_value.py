@@ -66,7 +66,7 @@ class ProductAttributeValue(models.Model):
                 raise UserError(
                     _(
                         "You cannot delete the attribute value "
-                        "because it is used on the some products"
+                        "because it is used on some products"
                     )
                 )
 
