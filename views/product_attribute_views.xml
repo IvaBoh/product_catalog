@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_attribute_view_form"
+            model="ir.ui.view">
+        <field name="name">product.attribute.view.form</field>
+        <field name="model">product.attribute</field>
+        <field name="arch" type="xml">
+            <form string="Attributes">
+                <sheet>
+                    <group name="Attribute"
+                           string="Attribute Information">
+                        <field name="name"/>
+                        <field name="value_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_attribute_view_tree"
+            model="ir.ui.view">
+        <field name="name">product.attribute.view.tree</field>
+        <field name="model">product.attribute</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="value_ids"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_attribute_view_search" model="ir.ui.view">
+        <field name="name">product.attribute.view.search</field>
+        <field name="model">product.attribute</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="value_ids"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="product_attribute_action"
+            model="ir.actions.act_window">
+        <field name="name">Attributes</field>
+        <field name="res_model">product.attribute</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+    <menuitem id="product_attribute_menu"
+              name="Attributes"
+              parent="product_catalog_main_menu"
+              action="product_attribute_action"
+              sequence="10"/>
+
+</odoo>

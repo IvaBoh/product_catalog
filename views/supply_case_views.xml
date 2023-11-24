@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="supply_case_view_form"
+            model="ir.ui.view">
+        <field name="name">supply.case.view.form</field>
+        <field name="model">supply.case</field>
+        <field name="arch" type="xml">
+            <form string="Supplies">
+                <sheet>
+                    <group name="Supply"
+                           string="Supply Case Info">
+                        <field name="supply_date"/>
+                        <field name="supplier_id"/>
+                        <field name="item_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="supply_case_view_tree"
+            model="ir.ui.view">
+        <field name="name">supply.case.view.tree</field>
+        <field name="model">supply.case</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="supply_date"/>
+                <field name="supplier_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="supply_case_view_search" model="ir.ui.view">
+        <field name="name">supply.case.view.search</field>
+        <field name="model">supply.case</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="supplier_id"/>
+                <filter name="groupby_supplier" string="Supplier"
+                        context="{'group_by': 'supplier_id'}"/>
+                <searchpanel view_types="tree">
+                    <field name="supplier_id" select="multi" enable_counters="1"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+    <record id="supply_case_view_pivot" model="ir.ui.view">
+        <field name="name">supply.case.view.pivot</field>
+        <field name="model">supply.case</field>
+        <field name="arch" type="xml">
+            <pivot display_quantity="1">
+                <field name="supplier_id"
+                       string="Supplier"
+                       type="row"/>
+                <field name="supply_date" type="col"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="supply_case_action"
+            model="ir.actions.act_window">
+        <field name="name">Supply cases</field>
+        <field name="res_model">supply.case</field>
+        <field name='view_mode'>tree,form,pivot</field>
+    </record>
+
+    <menuitem id="supply_case_menu"
+              name="Supply cases"
+              parent="product_catalog_main_menu"
+              action="supply_case_action"
+              sequence="70"/>
+
+</odoo>

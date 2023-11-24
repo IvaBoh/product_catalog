@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+
+    <record id="game_chair" model="product.product"
+            forcecreate="True">
+        <field name="name">Game Chair</field>
+        <field name="description">Nice game chair</field>
+        <field name="price">1000</field>
+        <field name="image_1920" type="base64"
+               file="product_catalog/static/img/game_chair_1920.png"/>
+        <field name="image_256" type="base64"
+               file="product_catalog/static/img/game_chair_256.png"/>
+        <field name="category_id" ref="product_category_gaming_chair"/>
+        <field name="attribute_value_ids" eval="[Command.set([ref('product_attr_value_6'), ref('product_attr_value_2')])]"/>
+    </record>
+
+    <record id="desk_chair" model="product.product"
+            forcecreate="True">
+        <field name="name">Desk chair</field>
+        <field name="description">Nice desk chair</field>
+        <field name="price">2000</field>
+        <field name="image_1920" type="base64"
+               file="product_catalog/static/img/desk_chair_1920.png"/>
+        <field name="image_256" type="base64"
+               file="product_catalog/static/img/desk_chair_256.png"/>
+        <field name="category_id" ref="product_category_desk_chair"/>
+        <field name="attribute_value_ids" eval="[Command.set([ref('product_attr_value_color_black'), ref('product_attr_value_4')])]"/>
+    </record>
+
+    <record id="arm_chair" model="product.product"
+            forcecreate="True">
+        <field name="name">Arm Chair</field>
+        <field name="description">Nice arm chair</field>
+        <field name="price">4000</field>
+        <field name="image_1920" type="base64"
+               file="product_catalog/static/img/arm_chair_1920.png"/>
+        <field name="image_256" type="base64"
+               file="product_catalog/static/img/arm_chair_256.png"/>
+        <field name="category_id" ref="product_category_gaming_chair"/>
+        <field name="attribute_value_ids" eval="[Command.set([ref('product_attr_value_1'), ref('product_attr_value_5')])]"/>
+    </record>
+
+    <record id="desk_table" model="product.product"
+            forcecreate="True">
+        <field name="name">Desk Table</field>
+        <field name="description">Nice desk table</field>
+        <field name="price">1356</field>
+        <field name="image_1920" type="base64"
+               file="product_catalog/static/img/desk_table_1920.png"/>
+        <field name="image_256" type="base64"
+               file="product_catalog/static/img/desk_table_256.png"/>
+        <field name="category_id" ref="product_category_desk"/>
+        <field name="attribute_value_ids" eval="[Command.set([ref('product_attr_value_color_white'), ref('product_attr_value_4')])]"/>
+    </record>
+
+    <record id="dining_table" model="product.product"
+            forcecreate="True">
+        <field name="name">Dining Table</field>
+        <field name="description">Nice dining table</field>
+        <field name="price">14000</field>
+        <field name="image_1920" type="base64"
+               file="product_catalog/static/img/dining_table_1920.png"/>
+        <field name="image_256" type="base64"
+               file="product_catalog/static/img/dining_table_256.png"/>
+        <field name="category_id" ref="product_category_dining_table"/>
+        <field name="attribute_value_ids" eval="[Command.set([ref('product_attr_value_3'), ref('product_attr_value_5')])]"/>
+    </record>
+
+</odoo>

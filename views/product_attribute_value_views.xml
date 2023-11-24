@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_attribute_value_view_form"
+            model="ir.ui.view">
+        <field name="name">product.attribute.value.view.form</field>
+        <field name="model">product.attribute.value</field>
+        <field name="arch" type="xml">
+            <form string="Attribute value">
+                <sheet>
+                    <group name="Attribute value"
+                           string="Attribute Value Information">
+                        <field name="name"/>
+                        <field name="attribute_id"/>
+                        <field name="product_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_attribute_value_view_tree"
+            model="ir.ui.view">
+        <field name="name">product.attribute.value.view.tree</field>
+        <field name="model">product.attribute.value</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="attribute_id"/>
+                <field name="product_ids"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_attribute_value_view_search" model="ir.ui.view">
+        <field name="name">product.attribute.value.view.search</field>
+        <field name="model">product.attribute.value</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="attribute_id"/>
+                <filter name="groupby_attribute" string="Attribute"
+                        context="{'group_by': 'attribute_id'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="product_attribute_value_action"
+            model="ir.actions.act_window">
+        <field name="name">Attribute value</field>
+        <field name="res_model">product.attribute.value</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+    <menuitem id="product_attribute_value_menu"
+              name="Attribute value"
+              parent="product_catalog_main_menu"
+              action="product_attribute_value_action"
+              sequence="20"/>
+
+</odoo>

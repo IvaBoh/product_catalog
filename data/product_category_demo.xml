@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_category_table" model="product.category"
+            forcecreate="True">
+        <field name="name">Table</field>
+    </record>
+
+    <record id="product_category_dining_table" model="product.category"
+            forcecreate="True">
+        <field name="parent_id" ref="product_category_table"/>
+        <field name="name">Dining Table</field>
+    </record>
+
+    <record id="product_category_desk" model="product.category"
+            forcecreate="True">
+        <field name="parent_id" ref="product_category_table"/>
+        <field name="name">Desk</field>
+    </record>
+
+    <record id="product_category_cafe_table" model="product.category"
+            forcecreate="True">
+        <field name="parent_id" ref="product_category_table"/>
+        <field name="name">Cafe table</field>
+    </record>
+
+    <record id="product_category_chair" model="product.category"
+            forcecreate="True">
+        <field name="name">Chair</field>
+    </record>
+
+    <record id="product_category_desk_chair" model="product.category"
+            forcecreate="True">
+        <field name="parent_id" ref="product_category_chair"/>
+        <field name="name">Desk chair</field>
+    </record>
+
+    <record id="product_category_armchair" model="product.category"
+            forcecreate="True">
+        <field name="parent_id" ref="product_category_chair"/>
+        <field name="name">Armchair</field>
+    </record>
+
+    <record id="product_category_gaming_chair" model="product.category"
+            forcecreate="True">
+        <field name="parent_id" ref="product_category_chair"/>
+        <field name="name">Gaming chair</field>
+    </record>
+
+</odoo>
