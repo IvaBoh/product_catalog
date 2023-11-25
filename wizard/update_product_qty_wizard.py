@@ -55,12 +55,9 @@ class UpdateProductQtyWizard(models.TransientModel):
         supply_items = self.env["supply.item"].browse(self.item_ids.ids)
         for supply_item in supply_items:
             product = supply_item.product_id
-            print(product, product.quantity)
             quantity_to_add = supply_item.quantity
-            print("add", quantity_to_add)
 
             new_quantity = product.quantity + quantity_to_add
-            print("new", new_quantity)
             product.write({"quantity": new_quantity})
 
         message = (
