@@ -13,6 +13,7 @@ class SupplyCase(models.Model):
         inverse_name="case_id",
         string="Products that will be supplied in this case.",
     )
+    active = fields.Boolean(default=True)
 
     def name_get(self):
         return [

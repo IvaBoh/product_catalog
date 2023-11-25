@@ -64,6 +64,9 @@ class UpdateProductQtyWizard(models.TransientModel):
             f"Product quantities updated for "
             f"the case: '{self.case_id.name_get()[0][1]}'."
         )
+        if self.case_id:
+            self.case_id.write({"active": False})
+
         notification = {
             "type": "ir.actions.client",
             "tag": "display_notification",
