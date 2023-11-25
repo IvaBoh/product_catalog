@@ -19,7 +19,7 @@
         "views/product_product_views.xml",
         "views/supply_case_views.xml",
         "views/supply_item_views.xml",
-        # "wizard/hospital_physician_reassignment_views.xml",
+        "wizard/update_product_qty_wizard_views.xml",
         # "report/physician_reports.xml",
     ],
     "demo": [

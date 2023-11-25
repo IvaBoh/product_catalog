@@ -7,3 +7,4 @@ access_res_partner,access_res_partner,model_res_partner,base.group_user,1,1,1,1
 access_res_company,access_res_company,model_res_company,base.group_user,1,1,1,1
 access_supply_item,access_supply_item,model_supply_item,base.group_user,1,1,1,1
 access_supply_case,access_supply_case,model_supply_case,base.group_user,1,1,1,1
+access_update_product_qty_wizard,access_update_product_qty_wizard,model_update_product_qty_wizard,base.group_user,1,1,1,1
