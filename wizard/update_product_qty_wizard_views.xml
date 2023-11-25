@@ -66,7 +66,7 @@
 
     <menuitem id="wizard_menu"
               parent="product_catalog_menu_root"
-              name="Wizard menu"
+              name="Update products in catalog"
               sequence="10"/>
 
     <menuitem id="update_product_qty_menu"

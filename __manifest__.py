@@ -20,7 +20,8 @@
         "views/supply_case_views.xml",
         "views/supply_item_views.xml",
         "wizard/update_product_qty_wizard_views.xml",
-        # "report/physician_reports.xml",
+        "report/product_catalog_templates.xml",
+        "report/product_catalog_reports.xml",
     ],
     "demo": [
         "data/res_partner_demo.xml",
