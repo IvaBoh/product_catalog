@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="update_product_qty_wizard_view_form_part_one" model="ir.ui.view">
+        <field name="name">update.product.qty.wizard.view.form.part.one</field>
+        <field name="model">update.product.qty.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Select supply case">
+                <sheet>
+                    <group>
+                        <field name="case_id"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_open_wizard_part_2"
+                            string="Select"
+                            type="object"
+                            class="btn-primary"/>
+                    <button special="cancel" class="oe_link" string="Close"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="update_product_qty_wizard_view_form_part_two" model="ir.ui.view">
+        <field name="name">update.product.qty.wizard.view.form.part.two</field>
+        <field name="model">update.product.qty.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Update product quantities">
+                <sheet>
+                    <group>
+                        <field name="item_ids"/>
+                        <p style="color: red;">Pay attention, this supply case is going to be archived after update.</p>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="update_product_qty"
+                            string="Update"
+                            type="object"
+                            class="btn-primary"/>
+                    <button special="cancel" class="oe_link" string="Close"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="update_product_qty_wizard_action_form_part_1"
+            model="ir.actions.act_window">
+        <field name="name">Update product quantities</field>
+        <field name="res_model">update.product.qty.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'default_case_id': active_id}</field>
+        <field name="binding_model_id" ref="model_supply_case"/>
+        <field name="binding_view_types">form</field>
+        <field name="binding_type">action</field>
+    </record>
+
+    <record id="update_product_qty_wizard_menu_action"
+            model="ir.actions.act_window">
+        <field name="name">Update product quantities</field>
+        <field name="res_model">update.product.qty.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="wizard_menu"
+              parent="product_catalog_menu_root"
+              name="Wizard menu"
+              sequence="10"/>
+
+    <menuitem id="update_product_qty_menu"
+              name="Update product quantities"
+              action="update_product_qty_wizard_menu_action"
+              parent="wizard_menu"
+              sequence="10"/>
+
+</odoo>
