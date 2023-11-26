@@ -11,7 +11,7 @@
     "data": [
         "security/product_catalog_groups.xml",
         "security/ir.model.access.csv",
-        "security/product_catalog_security.xml",
+        # "security/product_catalog_security.xml",
         "views/product_catalog_menus.xml",
         "views/res_partner_views.xml",
         "views/res_company_views.xml",

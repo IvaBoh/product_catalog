@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <data>
 
-        <record id="res_company_action" model="ir.actions.act_window">
-            <field name="name">Companies</field>
-            <field name="res_model">res.company</field>
-            <field name="view_mode">tree,form,kanban</field>
-        </record>
+    <record id="res_company_action" model="ir.actions.act_window">
+        <field name="name">Companies</field>
+        <field name="res_model">res.company</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
 
-        <menuitem id="company_menu"
-                  name="Companies"
-                  parent="product_catalog_main_menu"
-                  action="res_company_action"
-                  sequence="50"/>
+    <menuitem id="company_menu"
+              name="Companies"
+              parent="product_catalog_main_menu"
+              action="res_company_action"
+              sequence="50"/>
 
-    </data>
 </odoo>

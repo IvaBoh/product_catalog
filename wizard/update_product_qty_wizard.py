@@ -31,7 +31,7 @@ class UpdateProductQtyWizard(models.TransientModel):
     def _check_case_id(self):
         self.ensure_one()
         if not self.case_id:
-            raise ValidationError("Select supply case")
+            raise ValidationError(_("Select supply case"))
 
     def action_open_wizard_part_2(self):
         self.ensure_one()

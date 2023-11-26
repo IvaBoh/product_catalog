@@ -1,53 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <data noupdate="0">
-        <!--
-         Resource: res.partner
-         -->
-        <record id="res_company_1" model="res.company" forcecreate="True">
-            <field name="name">Monopolist 1</field>
-            <!--            <field eval="[Command.set([ref('base.res_partner_category_12')])]" name="category_id"/>-->
-            <!--            <field name="is_company">1</field>-->
-            <field name="street">1 Avenue</field>
-            <field name="city">Late</field>
-            <!--            <field name="state_id" ref='base.state_us_5'/>-->
-            <field name="zip">10000</field>
-            <field name="country_id" ref="base.ua"/>
-            <field name="email">last@example.com</field>
-            <field name="phone">(623)-000-0000</field>
-            <!--            <field name="website">http://www.new-corner.com</field>-->
-            <!--            <field name="image_1920" type="base64" file="base/static/img/res_partner_1-image.png"/>-->
-        </record>
+<odoo noupdate="0">
 
-        <record id="res_company_2" model="res.company" forcecreate="True">
-            <field name="name">Monopolist 2</field>
-            <!--            <field eval="[Command.set([ref('base.res_partner_category_14')])]" name="category_id"/>-->
-            <!--            <field name="is_company">1</field>-->
-            <field name="street">2 Avenue</field>
-            <field name="city">Coffee</field>
-            <!--            <field name="state_id" ref='base.state_us_5'/>-->
-            <field name="zip">11111</field>
-            <field name="country_id" ref="base.ua"/>
-            <field name="email">first@example.com</field>
-            <field name="phone">(000)-111-2222</field>
-            <!--            <field name="website">http://www.deco.com</field>-->
-            <!--            <field name="image_1920" type="base64" file="base/static/img/res_partner_2-image.png"/>-->
-        </record>
+    <record id="res_company_1" model="res.company" forcecreate="True">
+        <field name="name">Monopolist 1</field>
+        <field name="street">1 Avenue</field>
+        <field name="city">Late</field>
+        <field name="zip">10000</field>
+        <field name="country_id" ref="base.ua"/>
+        <field name="email">last@example.com</field>
+        <field name="phone">(623)-000-0000</field>
+    </record>
 
-        <record id="res_company_3" model="res.company" forcecreate="True">
-            <field name="name">Monopolist 3</field>
-            <!--            <field eval="[Command.set([ref('base.res_partner_category_14')])]" name="category_id"/>-->
-            <!--            <field name="is_company">1</field>-->
-            <field name="street">2 Avenue</field>
-            <field name="city">Cuppichion</field>
-            <!--            <field name="state_id" ref='base.state_us_5'/>-->
-            <field name="zip">14422</field>
-            <field name="country_id" ref="base.ua"/>
-            <field name="email">neva@example.com</field>
-            <field name="phone">(000)-111-3333</field>
-            <!--            <field name="website">http://www.deco.com</field>-->
-            <!--            <field name="image_1920" type="base64" file="base/static/img/res_partner_2-image.png"/>-->
-        </record>
+    <record id="res_company_2" model="res.company" forcecreate="True">
+        <field name="name">Monopolist 2</field>
+        <field name="street">2 Avenue</field>
+        <field name="city">Coffee</field>
+        <field name="zip">11111</field>
+        <field name="country_id" ref="base.ua"/>
+        <field name="email">first@example.com</field>
+        <field name="phone">(000)-111-2222</field>
+    </record>
 
-    </data>
+    <record id="res_company_3" model="res.company" forcecreate="True">
+        <field name="name">Monopolist 3</field>
+        <field name="street">2 Avenue</field>
+        <field name="city">Cuppichion</field>
+        <field name="zip">14422</field>
+        <field name="country_id" ref="base.ua"/>
+        <field name="email">neva@example.com</field>
+        <field name="phone">(000)-111-3333</field>
+    </record>
+
 </odoo>

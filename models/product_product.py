@@ -5,8 +5,6 @@ from odoo.exceptions import ValidationError
 class ProductProduct(models.Model):
     _name = "product.product"
     _description = "Product"
-    # _inherit = ["mail.thread", "mail.activity.mixin"]
-    # _order = "name, id"
 
     name = fields.Char(index=True, required=True, translate=True)
     description = fields.Text(translate=True)
