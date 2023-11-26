@@ -30,3 +30,19 @@ class SupplyItem(models.Model):
                         "has been added to supply case."
                     )
                 )
+
+    def name_get(self):
+        """
+        Method that returns a name for supply item
+        """
+        return [
+            (
+                record.id,
+                "Supplied by %s at %s"
+                % (
+                    record.case_id.supplier_id.name,
+                    record.case_id.supply_date,
+                ),
+            )
+            for record in self
+        ]
