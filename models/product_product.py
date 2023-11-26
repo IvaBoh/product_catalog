@@ -46,3 +46,8 @@ class ProductProduct(models.Model):
                         "could have quantity more than 1."
                     )
                 )
+
+    @api.onchange("type")
+    def _onchange_type(self):
+        if self.type == "service":
+            self.quantity = 1

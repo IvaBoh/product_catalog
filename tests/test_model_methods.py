@@ -85,3 +85,83 @@ class TestModelMethods(TestCommon):
             }
         )
         product_service_2._check_quantity()
+
+    def test_supply_case(self):
+        # check if case contains supply items (1 or more)
+        self.supply_case._check_item_quantity()
+
+        # check if case doesn't contain more than 50 items
+        items_51 = [
+            self.env["supply.item"].create(
+                {"product_id": self.product_gold_spoon.id, "quantity": 2}
+            )
+            for i in range(1, 52)
+        ]
+        with self.assertRaises(ValidationError):
+            self.supply_case.write(
+                {
+                    "supplier_id": self.supplier_demo.id,
+                    "supply_date": "2024-12-12",
+                    "item_ids": [
+                        (
+                            6,
+                            0,
+                            [new_item.id for new_item in items_51],
+                        )
+                    ],
+                }
+            )
+
+        # check case date is today of future
+        with self.assertRaises(ValidationError):
+            self.env["supply.case"].create(
+                {
+                    "supplier_id": self.supplier_demo.id,
+                    "supply_date": "2022-12-12",
+                    "item_ids": [
+                        (
+                            6,
+                            0,
+                            [
+                                self.supply_item.id,
+                            ],
+                        )
+                    ],
+                }
+            )
+        test_supply_case = self.env["supply.case"].create(
+            {
+                "supplier_id": self.supplier_demo.id,
+                "supply_date": "2100-12-12",
+                "item_ids": [
+                    (
+                        6,
+                        0,
+                        [
+                            self.supply_item.id,
+                        ],
+                    )
+                ],
+            }
+        )
+        test_supply_case._check_case_date()
+
+    def test_supply_item(self):
+        """
+        Check that supply item that have been already added to supply case
+        can't be archived
+        """
+        self.assertTrue(self.supply_item.active)
+
+        with self.assertRaises(ValidationError):
+            self.supply_item.active = False
+
+        # check supply item with no supply case could be archived
+        test_supply_item = self.env["supply.item"].create(
+            {
+                "product_id": self.product_gold_spoon.id,
+                "quantity": 10,
+            }
+        )
+        test_supply_item.active = False
+        test_supply_item._check_active_and_in_case()

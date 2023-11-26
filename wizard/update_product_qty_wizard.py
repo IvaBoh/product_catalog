@@ -10,12 +10,14 @@ class UpdateProductQtyWizard(models.TransientModel):
         comodel_name="supply.case",
         string="Supply case",
         help="Choose supply case to update some product set",
+        ondelete="cascade",
     )
     item_ids = fields.Many2many(
         comodel_name="supply.item",
         relation="wizard_supply_item_rel",
         string="Quantities of the these products will be updated",
         compute="_compute_item_ids",
+        ondelete="cascade",
     )
 
     @api.depends("case_id")
