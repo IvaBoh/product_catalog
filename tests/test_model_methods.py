@@ -1,5 +1,5 @@
 from odoo.tests import tagged
-from odoo.exceptions import AccessError, UserError, ValidationError
+from odoo.exceptions import UserError, ValidationError
 
 from .common import TestCommon
 
@@ -18,7 +18,8 @@ class TestModelMethods(TestCommon):
         )
         self.assertTrue(
             test_attribute.unlink(),
-            msg="User can delete attribute that doesn't linked to any product.",
+            msg="User can delete attribute "
+            "that doesn't linked to any product.",
         )
 
     def test_product_attribute_value(self):
@@ -32,7 +33,8 @@ class TestModelMethods(TestCommon):
 
         self.assertTrue(
             test_attribute_value.unlink(),
-            msg="User can delete attribute that doesn't linked to any product.",
+            msg="User can delete attribute "
+            "that doesn't linked to any product.",
         )
 
     def test_product_category(self):

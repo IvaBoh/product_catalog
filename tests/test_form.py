@@ -1,4 +1,3 @@
-from odoo import fields
 from odoo.tests import tagged
 from odoo.tests.common import Form
 
