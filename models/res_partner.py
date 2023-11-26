@@ -2,6 +2,11 @@ from odoo import fields, models
 
 
 class ResPartner(models.Model):
+    """
+    Inherited model huge res_partner model
+    Don't need any additional functionality
+    """
+
     _inherit = "res.partner"
     _description = "Product supplier"
 

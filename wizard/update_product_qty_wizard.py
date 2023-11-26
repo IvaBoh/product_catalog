@@ -3,6 +3,12 @@ from odoo.exceptions import ValidationError
 
 
 class UpdateProductQtyWizard(models.TransientModel):
+    """
+    Wizard class that allows to update product quantities.
+    It takes info from supply case and update product quantities in simple
+    manner.
+    """
+
     _name = "update.product.qty.wizard"
     _description = "Wizard that allows to update product quantities"
 
@@ -22,6 +28,10 @@ class UpdateProductQtyWizard(models.TransientModel):
 
     @api.depends("case_id")
     def _compute_item_ids(self):
+        """
+        This method fill in supply items for wizard model, so they can be
+        displayed in two-steps wizard form
+        """
         self.ensure_one()
         if self.case_id:
             items = self.env["supply.item"].search(
@@ -31,11 +41,17 @@ class UpdateProductQtyWizard(models.TransientModel):
 
     @api.constrains("case_id")
     def _check_case_id(self):
+        """
+        This method ensures that user select some supply case
+        """
         self.ensure_one()
         if not self.case_id:
             raise ValidationError(_("Select supply case"))
 
     def action_open_wizard_part_2(self):
+        """
+        This action method opens second form of the wizard
+        """
         self.ensure_one()
         view_id = self.env.ref(
             "product_catalog.update_product_qty_wizard_view_form_part_two"
@@ -53,6 +69,10 @@ class UpdateProductQtyWizard(models.TransientModel):
         }
 
     def update_product_qty(self):
+        """
+        This action button method from the second wizard form updates the
+        products base on the supply case info and its supply items
+        """
         self.ensure_one()
         supply_items = self.env["supply.item"].browse(self.item_ids.ids)
         for supply_item in supply_items:

@@ -3,6 +3,10 @@ from odoo.exceptions import ValidationError
 
 
 class ProductProduct(models.Model):
+    """
+    Base product class. It is simplified product entity.
+    """
+
     _name = "product.product"
     _description = "Product"
 
@@ -38,6 +42,10 @@ class ProductProduct(models.Model):
 
     @api.constrains("quantity", "type")
     def _check_quantity(self):
+        """
+        Method that checks whether product with type 'servise' has proper
+        quantity
+        """
         for record in self:
             if record.type == "service" and record.quantity > 1:
                 raise ValidationError(
@@ -49,5 +57,9 @@ class ProductProduct(models.Model):
 
     @api.onchange("type")
     def _onchange_type(self):
+        """
+        Form method that changes product quantity when user select
+        product type 'Service'
+        """
         if self.type == "service":
             self.quantity = 1

@@ -3,6 +3,11 @@ from odoo.exceptions import ValidationError
 
 
 class SupplyCase(models.Model):
+    """
+    Class that represents supply case. Supplier supply certain amount of goods
+    based on the products indicated in the supply case
+    """
+
     _name = "supply.case"
     _description = "Product supply case"
 
@@ -21,6 +26,9 @@ class SupplyCase(models.Model):
 
     @api.constrains("supply_date")
     def _check_case_date(self):
+        """
+        Method that checks that supply case can't be set to past date
+        """
         for case in self:
             if not case.supply_date >= fields.Date.today():
                 raise ValidationError(
@@ -29,6 +37,10 @@ class SupplyCase(models.Model):
 
     @api.constrains("item_ids")
     def _check_item_quantity(self):
+        """
+        Method that checks that supply case can't contain 0 or more than 50
+        products (not quantity of products, number of different products)
+        """
         for record in self:
             if len(record.item_ids) >= 50:
                 raise ValidationError(
@@ -43,6 +55,9 @@ class SupplyCase(models.Model):
                 )
 
     def name_get(self):
+        """
+        Method that returns a name for supply case as if it hasn't its own
+        """
         return [
             (
                 record.id,

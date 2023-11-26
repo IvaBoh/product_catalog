@@ -3,6 +3,10 @@ from odoo.exceptions import UserError
 
 
 class ProductAttribute(models.Model):
+    """
+    Product attribute class; attributes are essential features of a product
+    """
+
     _name = "product.attribute"
     _description = "Product Attribute"
 
@@ -16,6 +20,9 @@ class ProductAttribute(models.Model):
 
     @api.ondelete(at_uninstall=False)
     def _unlink_except_used_on_product(self):
+        """
+        Method that block attribute deletion if it used on some product
+        """
         for attribute in self:
             used_attr = attribute.value_ids
             if used_attr:

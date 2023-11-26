@@ -3,6 +3,11 @@ from odoo.exceptions import UserError
 
 
 class ProductAttributeValue(models.Model):
+    """
+    Attribute value class. Attribute could have multiple values.
+    Only combination of attribute and its value may have sense.
+    """
+
     _name = "product.attribute.value"
     _description = "Attribute Value"
 
@@ -29,12 +34,19 @@ class ProductAttributeValue(models.Model):
 
     @api.depends("product_ids")
     def _compute_is_used_on_products(self):
+        """
+        Method that sets a bool field on instance if
+        some attribute values is used on some products
+        """
         for attribute_value in self:
             attribute_value.is_used_on_products = bool(
                 attribute_value.product_ids
             )
 
     def write(self, values):
+        """
+        Method that blocks attribute value change if it used on some product
+        """
         if "attribute_id" in values:
             for attribute_value in self:
                 if (
@@ -63,6 +75,9 @@ class ProductAttributeValue(models.Model):
 
     @api.ondelete(at_uninstall=False)
     def _unlink_except_used_on_product(self):
+        """
+        Method that blocks attribute value deletion if it used on some product
+        """
         for attribute_value in self:
             if attribute_value.is_used_on_products:
                 raise UserError(
@@ -73,6 +88,10 @@ class ProductAttributeValue(models.Model):
                 )
 
     def name_get(self):
+        """
+        Method that returns proper name for attribute value.
+        Value without attribute name has no sense.
+        """
         return [
             (value.id, "%s: %s" % (value.attribute_id.name, value.name))
             for value in self

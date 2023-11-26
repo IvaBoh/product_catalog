@@ -6,7 +6,7 @@ from .common import TestCommon
 
 @tagged("post_install", "-at_install", "catalog")
 class TestAccessRights(TestCommon):
-    def test_01_product_catalog_user_access_rights(self):
+    def test_product_catalog_user_access_rights(self):
         with self.assertRaises(
             AccessError,
             msg="Catalog user can read only the categories"
@@ -38,12 +38,12 @@ class TestAccessRights(TestCommon):
         # user can't delete other user categories
         with self.assertRaises(
             AccessError,
-            msg="Catalog user can't other user categories "
+            msg="Catalog user can't delete other user categories "
             "due to rule 'product_catalog_rule_user'",
         ):
             self.category_spoon.with_user(self.catalog_user).unlink()
 
-    def test_01_product_catalog_admin_access_rights(self):
+    def test_product_catalog_admin_access_rights(self):
         # admin can create
         admin_category = (
             self.env["product.category"]
