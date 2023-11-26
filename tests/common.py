@@ -10,32 +10,88 @@ class TestCommon(TransactionCase):
         self.product_catalog_group_admin = self.env.ref(
             "product_catalog.product_catalog_group_admin"
         )
-        self.library_user = self.env["res.users"].create(
+        self.catalog_user = self.env["res.users"].create(
             {
-                "name": "Library User",
-                "login": "library_user",
+                "name": "Catalog User",
+                "login": "catalog_user",
                 "groups_id": [
-                    (4, self.env.ref("base.group_user").id),
-                    (4, self.group_library_user.id),
+                    (4, self.product_catalog_group_user.id),
                 ],
             }
         )
-        self.library_admin = self.env["res.users"].create(
+        self.catalog_admin = self.env["res.users"].create(
             {
-                "name": "Library Admin",
-                "login": "library_admin",
+                "name": "Catalog Admin",
+                "login": "catalog_admin",
                 "groups_id": [
-                    (4, self.env.ref("base.group_user").id),
-                    (4, self.group_library_admin.id),
+                    (4, self.product_catalog_group_admin.id),
                 ],
             }
         )
-        self.reader = self.env["res.partner"].create({"name": "Demo Reader"})
-        self.book_demo = self.env["library.book"].create({"name": "Demo Book"})
-        self.library_author = self.env["library.author"].create(
+        self.supplier_demo = self.env["res.partner"].create(
+            {"name": "Demo Supplier"}
+        )
+        self.company_demo = self.env["res.company"].create(
+            {"name": "Demo Company"}
+        )
+        self.attribute_material = self.env["product.attribute"].create(
             {
-                "first_name": "Mark",
-                "last_name": "Twain",
-                "birth_date": "1835-11-30",
+                "name": "Material",
+            }
+        )
+        self.attribute_weight = self.env["product.attribute"].create(
+            {
+                "name": "Weight",
+            }
+        )
+        self.attribute_value_material_gold = self.env[
+            "product.attribute.value"
+        ].create({"name": "Gold", "attribute_id": self.attribute_material.id})
+        self.attribute_value_weight_30 = self.env[
+            "product.attribute.value"
+        ].create({"name": "30", "attribute_id": self.attribute_weight.id})
+        self.category_spoon = self.env["product.category"].create(
+            {
+                "name": "Spoons",
+            }
+        )
+        self.product_gold_spoon = self.env["product.product"].create(
+            {
+                "name": "Teaspoon",
+                "description": "Spoon for tea cups",
+                "quantity": 10,
+                "price": 6000,
+                "category_id": self.category_spoon.id,
+                "attribute_value_ids": [
+                    (
+                        6,
+                        0,
+                        [
+                            self.attribute_value_material_gold.id,
+                            self.attribute_value_weight_30.id,
+                        ],
+                    )
+                ],
+            }
+        )
+        self.supply_item = self.env["supply.item"].create(
+            {
+                "product_id": self.product_gold_spoon.id,
+                "quantity": 10,
+            }
+        )
+        self.supply_case = self.env["supply.case"].create(
+            {
+                "supplier_id": self.supplier_demo.id,
+                "supply_date": "2023-12-12",
+                "item_ids": [
+                    (
+                        6,
+                        0,
+                        [
+                            self.supply_item.id,
+                        ],
+                    )
+                ],
             }
         )

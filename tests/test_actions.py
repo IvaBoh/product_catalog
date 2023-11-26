@@ -1,7 +1,7 @@
 from odoo.tests import tagged
 from odoo.exceptions import AccessError, UserError
 
-from common import TestCommon
+from .common import TestCommon
 
 
 @tagged("post_install", "-at_install", "catalog")

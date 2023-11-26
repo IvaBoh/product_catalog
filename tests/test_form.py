@@ -2,7 +2,7 @@ from odoo import fields
 from odoo.tests import tagged
 from odoo.tests.common import Form
 
-from common import TestCommon
+from .common import TestCommon
 
 
 @tagged("post_install", "-at_install", "catalog")
