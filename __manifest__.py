@@ -1,8 +1,8 @@
 {
-    "name": "Hospital Management",
+    "name": "Product catalog",
     "version": "15.0.1.0.0",
     "category": "Services",
-    "summary": """Product catalog""",
+    "summary": """Product catalog to store and manage product data""",
     "license": "LGPL-3",
     "author": "Iva Boh",
     "maintainer": "https://github.com/IvaBoh",

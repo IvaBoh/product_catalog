@@ -43,7 +43,7 @@ class ProductAttributeValue(models.Model):
                 ):
                     raise UserError(
                         _(
-                            "You cannot change the attribute "
+                            "You can't change the attribute "
                             "of the value '%(attribute_name)s' "
                             "because it is used on "
                             "some products: %(product_list)s, ..."
@@ -67,7 +67,7 @@ class ProductAttributeValue(models.Model):
             if attribute_value.is_used_on_products:
                 raise UserError(
                     _(
-                        "You cannot delete the attribute value "
+                        "You can't delete the attribute value "
                         "because it is used on some products"
                     )
                 )

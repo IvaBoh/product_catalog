@@ -1,0 +1,773 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_catalog
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-26 19:20+0000\n"
+"PO-Revision-Date: 2023-11-26 19:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_category__product_count
+msgid "# Products"
+msgstr "Товари"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_product__active
+#: model:ir.model.fields,field_description:product_catalog.field_supply_case__active
+#: model:ir.model.fields,field_description:product_catalog.field_supply_item__active
+msgid "Active"
+msgstr "Активне"
+
+#. module: product_catalog
+#: model:res.groups,comment:product_catalog.product_catalog_group_admin
+msgid "Адміністратори каталогу товарів (повні права)"
+msgstr ""
+
+#. module: product_catalog
+#: model:product.product,name:product_catalog.arm_chair
+msgid "Arm Chair"
+msgstr "Крісло"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_attribute__name
+#: model:ir.model.fields,field_description:product_catalog.field_product_attribute_value__attribute_id
+#: model_terms:ir.ui.view,arch_db:product_catalog.product_attribute_value_view_search
+msgid "Attribute"
+msgstr "Атрибут"
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.product_attribute_view_form
+msgid "Attribute Information"
+msgstr "Інформація по атрибуту"
+
+#. module: product_catalog
+#: model:ir.model,name:product_catalog.model_product_attribute_value
+msgid "Attribute Value"
+msgstr "Значення атрибуту"
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.product_attribute_value_view_form
+msgid "Attribute Value Information"
+msgstr "Інформація по значенню атрибута"
+
+#. module: product_catalog
+#: model:ir.actions.act_window,name:product_catalog.product_attribute_value_action
+#: model:ir.ui.menu,name:product_catalog.product_attribute_value_menu
+#: model_terms:ir.ui.view,arch_db:product_catalog.product_attribute_value_view_form
+msgid "Attribute value"
+msgstr "Значення атрибуту"
+
+#. module: product_catalog
+#: model:ir.actions.act_window,name:product_catalog.product_attribute_action
+#: model:ir.ui.menu,name:product_catalog.product_attribute_menu
+#: model_terms:ir.ui.view,arch_db:product_catalog.product_attribute_view_form
+msgid "Attributes"
+msgstr ""
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.product_product_view_kanban
+msgid "Attributes:"
+msgstr "Атрибути:"
+
+#. module: product_catalog
+#: model:product.attribute.value,name:product_catalog.product_attr_value_color_black
+msgid "Black"
+msgstr "Чорний"
+
+#. module: product_catalog
+#: model:product.attribute.value,name:product_catalog.product_attr_value_1
+msgid "Blue"
+msgstr "Синій"
+
+#. module: product_catalog
+#: model:ir.module.category,name:product_catalog.product_catalog_group_main
+msgid "Catalog"
+msgstr "Каталог"
+
+#. module: product_catalog
+#: model:res.groups,name:product_catalog.product_catalog_group_admin
+msgid "Catalog Administrator"
+msgstr "Адміністратор каталога"
+
+#. module: product_catalog
+#: model:res.groups,name:product_catalog.product_catalog_group_user
+msgid "Catalog User"
+msgstr "Користувач каталога"
+
+#. module: product_catalog
+#: model:ir.ui.menu,name:product_catalog.product_catalog_main_menu
+msgid "Catalog menu"
+msgstr "Меню каталога"
+
+#. module: product_catalog
+#: model:ir.actions.act_window,name:product_catalog.product_category_action
+#: model:ir.ui.menu,name:product_catalog.product_category_menu
+#: model_terms:ir.ui.view,arch_db:product_catalog.product_category_view_form
+msgid "Categories"
+msgstr "Категорії"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_product__category_id
+#: model_terms:ir.ui.view,arch_db:product_catalog.product_product_view_search
+msgid "Category"
+msgstr "Категорія"
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.product_category_view_form
+msgid "Category Information"
+msgstr "Інформація по категорії"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_category__child_ids
+msgid "Child Categories"
+msgstr "Дочірні категорії"
+
+#. module: product_catalog
+#: model:ir.model.fields,help:product_catalog.field_update_product_qty_wizard__case_id
+msgid "Виберіть постачання, щоб оновити набір товарів"
+msgstr ""
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.supply_case_report_template
+msgid "City:"
+msgstr "Місто"
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.update_product_qty_wizard_view_form_part_one
+#: model_terms:ir.ui.view,arch_db:product_catalog.update_product_qty_wizard_view_form_part_two
+msgid "Close"
+msgstr "Зачинити"
+
+#. module: product_catalog
+#: model:product.attribute,name:product_catalog.product_attribute_1
+msgid "Color"
+msgstr "Колір"
+
+#. module: product_catalog
+#: model:ir.actions.act_window,name:product_catalog.res_company_action
+#: model:ir.ui.menu,name:product_catalog.company_menu
+msgid "Companies"
+msgstr "Компанії"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_res_partner__company_id
+msgid "Company"
+msgstr "Компанія"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_category__complete_name
+msgid "Complete Name"
+msgstr "Повне ім'я"
+
+#. module: product_catalog
+#: model:ir.model.fields.selection,name:product_catalog.selection__product_product__type__consu
+msgid "Consumable"
+msgstr "Споживчий товар"
+
+#. module: product_catalog
+#: model:ir.model.fields,help:product_catalog.field_product_product__type
+msgid "Consumable products have to be stored somewhere."
+msgstr "Споживчі товари треба десь зберігати."
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_attribute__create_uid
+#: model:ir.model.fields,field_description:product_catalog.field_product_attribute_value__create_uid
+#: model:ir.model.fields,field_description:product_catalog.field_product_category__create_uid
+#: model:ir.model.fields,field_description:product_catalog.field_product_product__create_uid
+#: model:ir.model.fields,field_description:product_catalog.field_supply_case__create_uid
+#: model:ir.model.fields,field_description:product_catalog.field_supply_item__create_uid
+#: model:ir.model.fields,field_description:product_catalog.field_update_product_qty_wizard__create_uid
+msgid "Created by"
+msgstr "Стовено (користувач)"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_attribute__create_date
+#: model:ir.model.fields,field_description:product_catalog.field_product_attribute_value__create_date
+#: model:ir.model.fields,field_description:product_catalog.field_product_category__create_date
+#: model:ir.model.fields,field_description:product_catalog.field_product_product__create_date
+#: model:ir.model.fields,field_description:product_catalog.field_supply_case__create_date
+#: model:ir.model.fields,field_description:product_catalog.field_supply_item__create_date
+#: model:ir.model.fields,field_description:product_catalog.field_update_product_qty_wizard__create_date
+msgid "Created on"
+msgstr "Створено (дата)"
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.product_product_view_kanban
+msgid "Delete"
+msgstr "Видалити"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_product__description
+msgid "Description"
+msgstr "Опис"
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.product_product_view_kanban
+msgid "Description:"
+msgstr "Опис"
+
+#. module: product_catalog
+#: model:product.product,name:product_catalog.desk_table
+msgid "Desk Table"
+msgstr "Письмовий стіл"
+
+#. module: product_catalog
+#: model:product.product,name:product_catalog.desk_chair
+msgid "Desk chair"
+msgstr "Стілець для письмового столу"
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.product_category_view_search
+msgid "Desks"
+msgstr "Письмові столи"
+
+#. module: product_catalog
+#: model:product.product,name:product_catalog.dining_table
+msgid "Dining Table"
+msgstr "Обідній стіл"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_attribute__display_name
+#: model:ir.model.fields,field_description:product_catalog.field_product_attribute_value__display_name
+#: model:ir.model.fields,field_description:product_catalog.field_product_category__display_name
+#: model:ir.model.fields,field_description:product_catalog.field_product_product__display_name
+#: model:ir.model.fields,field_description:product_catalog.field_supply_case__display_name
+#: model:ir.model.fields,field_description:product_catalog.field_supply_item__display_name
+#: model:ir.model.fields,field_description:product_catalog.field_update_product_qty_wizard__display_name
+msgid "Display Name"
+msgstr "Ім'я"
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.product_product_view_kanban
+msgid "Dropdown menu"
+msgstr "Випадаюче меню"
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.product_product_view_kanban
+msgid "Edit"
+msgstr "Змінити"
+
+#. module: product_catalog
+#: model:product.product,name:product_catalog.game_chair
+msgid "Game Chair"
+msgstr "Ігрове крісло"
+
+#. module: product_catalog
+#: model:product.attribute.value,name:product_catalog.product_attr_value_2
+msgid "Green"
+msgstr "Зелений"
+
+#. module: product_catalog
+#: model:product.attribute,name:product_catalog.product_attribute_2
+msgid "Height"
+msgstr "Висота"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_attribute__id
+#: model:ir.model.fields,field_description:product_catalog.field_product_attribute_value__id
+#: model:ir.model.fields,field_description:product_catalog.field_product_category__id
+#: model:ir.model.fields,field_description:product_catalog.field_product_product__id
+#: model:ir.model.fields,field_description:product_catalog.field_supply_case__id
+#: model:ir.model.fields,field_description:product_catalog.field_supply_item__id
+#: model:ir.model.fields,field_description:product_catalog.field_update_product_qty_wizard__id
+msgid "ID"
+msgstr "ІД"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_product__image_1920
+msgid "Image 1920"
+msgstr "Зображення 1920"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_product__image_256
+msgid "Image 256"
+msgstr "Зображення 256"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_res_partner__is_supplier
+#: model:ir.model.fields,field_description:product_catalog.field_res_users__is_supplier
+msgid "Is Supplier"
+msgstr "Є постачальником"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_attribute____last_update
+#: model:ir.model.fields,field_description:product_catalog.field_product_attribute_value____last_update
+#: model:ir.model.fields,field_description:product_catalog.field_product_category____last_update
+#: model:ir.model.fields,field_description:product_catalog.field_product_product____last_update
+#: model:ir.model.fields,field_description:product_catalog.field_supply_case____last_update
+#: model:ir.model.fields,field_description:product_catalog.field_supply_item____last_update
+#: model:ir.model.fields,field_description:product_catalog.field_update_product_qty_wizard____last_update
+msgid "Last Modified on"
+msgstr "Дата останньої модифікації"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_attribute__write_uid
+#: model:ir.model.fields,field_description:product_catalog.field_product_attribute_value__write_uid
+#: model:ir.model.fields,field_description:product_catalog.field_product_category__write_uid
+#: model:ir.model.fields,field_description:product_catalog.field_product_product__write_uid
+#: model:ir.model.fields,field_description:product_catalog.field_supply_case__write_uid
+#: model:ir.model.fields,field_description:product_catalog.field_supply_item__write_uid
+#: model:ir.model.fields,field_description:product_catalog.field_update_product_qty_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Останнє оновлення (користувач)"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_attribute__write_date
+#: model:ir.model.fields,field_description:product_catalog.field_product_attribute_value__write_date
+#: model:ir.model.fields,field_description:product_catalog.field_product_category__write_date
+#: model:ir.model.fields,field_description:product_catalog.field_product_product__write_date
+#: model:ir.model.fields,field_description:product_catalog.field_supply_case__write_date
+#: model:ir.model.fields,field_description:product_catalog.field_supply_item__write_date
+#: model:ir.model.fields,field_description:product_catalog.field_update_product_qty_wizard__write_date
+msgid "Last Updated on"
+msgstr "Дата останнього оновлення"
+
+#. module: product_catalog
+#: model:product.attribute,name:product_catalog.product_attribute_4
+msgid "Length"
+msgstr "Довжина"
+
+#. module: product_catalog
+#: model:product.attribute,name:product_catalog.product_attribute_5
+msgid "Material"
+msgstr "Матеріал"
+
+#. module: product_catalog
+#: model:product.attribute.value,name:product_catalog.product_attr_value_4
+msgid "Metal"
+msgstr "Метал"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_category__name
+#: model:ir.model.fields,field_description:product_catalog.field_product_product__name
+msgid "Name"
+msgstr "Ім'я"
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.product_product_view_kanban
+msgid "Name:"
+msgstr "Ім'я:"
+
+#. module: product_catalog
+#: model:product.product,description:product_catalog.arm_chair
+msgid "Nice arm chair"
+msgstr "Гарне крісло"
+
+#. module: product_catalog
+#: model:product.product,description:product_catalog.desk_chair
+msgid "Nice desk chair"
+msgstr "Гарний стілець для письмового столу"
+
+#. module: product_catalog
+#: model:product.product,description:product_catalog.desk_table
+msgid "Nice desk table"
+msgstr "Гарний письмовий стіл"
+
+#. module: product_catalog
+#: model:product.product,description:product_catalog.dining_table
+msgid "Nice dining table"
+msgstr "Гарний обідній стіл"
+
+#. module: product_catalog
+#: model:product.product,description:product_catalog.game_chair
+msgid "Nice game chair"
+msgstr "Гарне ігрове крісло"
+
+#. module: product_catalog
+#: code:addons/product_catalog/models/supply_case.py:0
+#, python-format
+msgid "Одна поставка не може містити більше ніж 50 одиниць постачання."
+msgstr ""
+
+#. module: product_catalog
+#: code:addons/product_catalog/models/product_product.py:0
+#, python-format
+msgid "Only products with type 'Consumable' could have quantity more than 1."
+msgstr "Лише товари з типом "Споживчий" можуть мати кількість більше 1."
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_category__parent_id
+msgid "Parent Category"
+msgstr "Батьківська категорія"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_category__parent_path
+msgid "Parent Path"
+msgstr "Батькіський шлях"
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.update_product_qty_wizard_view_form_part_two
+msgid "Pay attention, this supply case is going to be archived after update."
+msgstr "Зверніть увагу, цей єпізод постачання буде заархівований після оновлення."
+
+#. module: product_catalog
+#: model:product.attribute.value,name:product_catalog.product_attr_value_6
+msgid "Plastic"
+msgstr "Пластик"
+
+#. module: product_catalog
+#: model:ir.model.fields,help:product_catalog.field_product_product__price
+msgid "Price at which the product is sold to customers."
+msgstr "Ціна, за якою товар продається клієнтам."
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.supply_case_report_template
+msgid "Print at:"
+msgstr "Надруковано в"
+
+#. module: product_catalog
+#: model:ir.model,name:product_catalog.model_product_product
+#: model:ir.model.fields,field_description:product_catalog.field_supply_item__product_id
+#: model_terms:ir.ui.view,arch_db:product_catalog.supply_case_report_template
+msgid "Product"
+msgstr "Товар"
+
+#. module: product_catalog
+#: model:ir.model,name:product_catalog.model_product_attribute
+msgid "Product Attribute"
+msgstr "Атрибут товару"
+
+#. module: product_catalog
+#: model:ir.model,name:product_catalog.model_product_category
+msgid "Product Category"
+msgstr "Категорія товару"
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.product_product_view_form
+msgid "Product Information"
+msgstr "Інформація по товару"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_product__type
+msgid "Product Type"
+msgstr "Тип товару"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_product__attribute_value_ids
+msgid "Product attributes"
+msgstr "Атрибути товару"
+
+#. module: product_catalog
+#: model:ir.ui.menu,name:product_catalog.product_catalog_menu_root
+msgid "Product catalog"
+msgstr "Каталог товарів"
+
+#. module: product_catalog
+#: model:ir.model,name:product_catalog.model_res_partner
+msgid "Product supplier"
+msgstr "Постачальник товарів"
+
+#. module: product_catalog
+#: model:ir.model,name:product_catalog.model_supply_case
+msgid "Product supply case"
+msgstr "Єпізод постачання товару"
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.supply_case_report_template
+msgid "Product that were supplied"
+msgstr "Товар який було поповнено"
+
+#. module: product_catalog
+#: code:addons/product_catalog/wizard/update_product_qty_wizard.py:0
+#, python-format
+msgid "Product update info"
+msgstr "Інформація по оновленню товарів"
+
+#. module: product_catalog
+#: model:ir.actions.act_window,name:product_catalog.product_product_action
+#: model:ir.ui.menu,name:product_catalog.product_product_menu
+#: model_terms:ir.ui.view,arch_db:product_catalog.product_product_view_form
+msgid "Products"
+msgstr "Товари"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_supply_case__item_ids
+msgid "Products that will be supplied in this case."
+msgstr "Товари, які будуть постачатись в цьому єпізоді постачання."
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_attribute_value__product_ids
+msgid "Products with this attribute value"
+msgstr "Товари з цим значення атрибуту"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_update_product_qty_wizard__item_ids
+msgid "Quantities of the these products will be updated"
+msgstr "Значення кількості цих товарів буде оновлено"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_product__quantity
+#: model:ir.model.fields,field_description:product_catalog.field_supply_item__quantity
+#: model_terms:ir.ui.view,arch_db:product_catalog.supply_case_report_template
+msgid "Quantity"
+msgstr "Кількість"
+
+#. module: product_catalog
+#: code:addons/product_catalog/report/supply_case_report.py:0
+#: model:ir.model,name:product_catalog.model_report_product_catalog_supply_case_report_template
+#, python-format
+msgid "Report on supply cases of products"
+msgstr "Звіт по єпізодам постачання товарів"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_product__price
+msgid "Sales Price"
+msgstr "Ціна продажу"
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.update_product_qty_wizard_view_form_part_one
+msgid "Select"
+msgstr "Вибір"
+
+#. module: product_catalog
+#: model:ir.model.fields,help:product_catalog.field_product_product__category_id
+msgid "Select category for the current product"
+msgstr "Виберіть категорію для поточного товару"
+
+#. module: product_catalog
+#: code:addons/product_catalog/wizard/update_product_qty_wizard.py:0
+#: model_terms:ir.ui.view,arch_db:product_catalog.update_product_qty_wizard_view_form_part_one
+#, python-format
+msgid "Select supply case"
+msgstr "Оберіть єпізод постачання"
+
+#. module: product_catalog
+#: model:ir.model.fields.selection,name:product_catalog.selection__product_product__type__service
+msgid "Service"
+msgstr "Послуги"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_res_company__staff_ids
+msgid "Staff"
+msgstr "Персонал"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_supply_case__supplier_id
+#: model_terms:ir.ui.view,arch_db:product_catalog.supply_case_view_pivot
+#: model_terms:ir.ui.view,arch_db:product_catalog.supply_case_view_search
+msgid "Supplier"
+msgstr "Постачальник"
+
+#. module: product_catalog
+#: code:addons/product_catalog/models/res_company.py:0
+#: model:ir.model,name:product_catalog.model_res_company
+#, python-format
+msgid "Supplier company"
+msgstr "Компанія постачальник"
+
+#. module: product_catalog
+#: model:ir.actions.act_window,name:product_catalog.res_partner_action
+#: model:ir.ui.menu,name:product_catalog.supplier_menu
+msgid "Suppliers"
+msgstr "Постачальники"
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.supply_case_view_form
+msgid "Supplies"
+msgstr "Єпізоди постачання"
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.supply_case_report_template
+#: model_terms:ir.ui.view,arch_db:product_catalog.supply_case_view_form
+msgid "Supply Case Info"
+msgstr "Інформація по єпізоду постачання"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_supply_case__supply_date
+msgid "Supply Date"
+msgstr "Дата єпізоду постачання"
+
+#. module: product_catalog
+#: model:ir.actions.act_window,name:product_catalog.supply_item_action
+#: model:ir.ui.menu,name:product_catalog.supply_item_menu
+msgid "Supply Items"
+msgstr "Одиниці постачання"
+
+#. module: product_catalog
+#: code:addons/product_catalog/models/supply_case.py:0
+#, python-format
+msgid "Supply can be only today or in future."
+msgstr "Поставка може бути лише або сьогодні або в майбутньому."
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_supply_item__case_id
+#: model:ir.model.fields,field_description:product_catalog.field_update_product_qty_wizard__case_id
+#: model_terms:ir.ui.view,arch_db:product_catalog.supply_item_view_search
+msgid "Supply case"
+msgstr "Єпізод постачання"
+
+#. module: product_catalog
+#: code:addons/product_catalog/models/supply_case.py:0
+#, python-format
+msgid "Supply case has to contain supplied items."
+msgstr "Поставка має містити одиниці постачання"
+
+#. module: product_catalog
+#: model:ir.actions.report,name:product_catalog.supply_case_report_action
+msgid "Supply case info"
+msgstr "Інформація по єпізоду постачання"
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.supply_case_report_template
+msgid "Supply case title:"
+msgstr "Назва єпізоду постачання"
+
+#. module: product_catalog
+#: model:ir.actions.act_window,name:product_catalog.supply_case_action
+#: model:ir.ui.menu,name:product_catalog.supply_case_menu
+msgid "Supply cases"
+msgstr "Єпізоди постачання"
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.supply_item_view_form
+msgid "Supply item"
+msgstr "Одиниця єпізоду постачання"
+
+#. module: product_catalog
+#: code:addons/product_catalog/models/supply_item.py:0
+#: model:ir.model,name:product_catalog.model_supply_item
+#, python-format
+msgid "Supply item is a product presented in some quantity"
+msgstr "Одиниця постачання це товар представлений в певній кількості"
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.product_category_view_search
+msgid "Tables"
+msgstr "Столи"
+
+#. module: product_catalog
+#: model:ir.model.fields,help:product_catalog.field_product_attribute_value__attribute_id
+msgid ""
+"The attribute cannot be changed once the value is used on at least one "
+"product."
+msgstr "Атрибут не можна змінити, якщо значення використовується принаймні в одному "
+"продукті."
+
+#. module: product_catalog
+#: model:ir.model.fields,help:product_catalog.field_product_category__product_count
+msgid ""
+"The number of products under this category (Does not consider the children "
+"categories)"
+msgstr "Кількість товарів в цій категорії (Дочірні категорії не "
+"враховуються)"
+
+#. module: product_catalog
+#: model_terms:ir.ui.view,arch_db:product_catalog.update_product_qty_wizard_view_form_part_two
+msgid "Update"
+msgstr "Оновлення"
+
+#. module: product_catalog
+#: code:addons/product_catalog/wizard/update_product_qty_wizard.py:0
+#: model:ir.actions.act_window,name:product_catalog.update_product_qty_wizard_action_form_part_1
+#: model:ir.actions.act_window,name:product_catalog.update_product_qty_wizard_menu_action
+#: model:ir.ui.menu,name:product_catalog.update_product_qty_menu
+#: model_terms:ir.ui.view,arch_db:product_catalog.update_product_qty_wizard_view_form_part_two
+#, python-format
+msgid "Update product quantities"
+msgstr "Оновлення кількості товару(ів)"
+
+#. module: product_catalog
+#: model:ir.ui.menu,name:product_catalog.wizard_menu
+msgid "Update products in catalog"
+msgstr "Оновити товари в каталозі"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_attribute_value__is_used_on_products
+msgid "Used on Products"
+msgstr "Використовуюєтсья в товарах"
+
+#. module: product_catalog
+#: model:ir.module.category,description:product_catalog.product_catalog_group_main
+msgid "User access levels for the product catalog"
+msgstr "Рівні доступу користувачів до каталогу товарів"
+
+#. module: product_catalog
+#: model:res.groups,comment:product_catalog.product_catalog_group_user
+msgid "Users of the product catalog"
+msgstr "Користувачі каталогу товарів"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_attribute_value__name
+msgid "Value"
+msgstr "Значення"
+
+#. module: product_catalog
+#: model:ir.model.fields,field_description:product_catalog.field_product_attribute__value_ids
+msgid "Values"
+msgstr "Значення"
+
+#. module: product_catalog
+#: model:product.attribute.value,name:product_catalog.product_attr_value_color_white
+msgid "White"
+msgstr "Білий"
+
+#. module: product_catalog
+#: model:product.attribute,name:product_catalog.product_attribute_3
+msgid "Width"
+msgstr "Ширина"
+
+#. module: product_catalog
+#: model:ir.model,name:product_catalog.model_update_product_qty_wizard
+msgid "Wizard that allows to update product quantities"
+msgstr "Майстер, що дозволяє оновлювати кількість товару"
+
+#. module: product_catalog
+#: model:product.attribute.value,name:product_catalog.product_attr_value_5
+msgid "Wood"
+msgstr "Дерево"
+
+#. module: product_catalog
+#: model:product.attribute.value,name:product_catalog.product_attr_value_3
+msgid "Yellow"
+msgstr "Жовтий"
+
+#. module: product_catalog
+#: code:addons/product_catalog/models/supply_item.py:0
+#, python-format
+msgid "You can't archive the item that has been added to supply case."
+msgstr "Ви не можете заархівувати одиницю постачання, яка було додана до єпізоду постачання."
+
+#. module: product_catalog
+#: code:addons/product_catalog/models/product_attribute_value.py:0
+#, python-format
+msgid ""
+"You can't change the attribute of the value '%(attribute_name)s' because it "
+"is used on some products: %(product_list)s, ..."
+msgstr ""
+"Ви не можете змінити значення атрибуту "%(attribute_name)s", тому що воно "
+"використовується для в деяких товарах: %(product_list)s, ..."
+
+#. module: product_catalog
+#: code:addons/product_catalog/models/product_category.py:0
+#, python-format
+msgid "You can't create recursive categories."
+msgstr "Ви не можете створювати рекурсивні категорії."
+
+#. module: product_catalog
+#: code:addons/product_catalog/models/product_attribute.py:0
+#, python-format
+msgid "You can't delete the attribute because it is used on some products"
+msgstr "Ви не можете видалити атрибут, оскільки він використовується в деяких продуктах"
+
+#. module: product_catalog
+#: code:addons/product_catalog/models/product_attribute_value.py:0
+#, python-format
+msgid ""
+"You can't delete the attribute value because it is used on some products"
+msgstr ""
+"Ви не можете видалити значення атрибута, оскільки воно використовується в деяких продуктах"
+
+#. module: product_catalog
+#: code:addons/product_catalog/models/product_category.py:0
+#, python-format
+msgid "You can't delete this category, because it contains linked products."
+msgstr "Ви не можете видалити цю категорію, оскільки вона містить пов’язані товари."

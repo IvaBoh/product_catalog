@@ -67,7 +67,7 @@ class ProductCategory(models.Model):
     @api.constrains("parent_id")
     def _check_category_recursion(self):
         if not self._check_recursion():
-            raise ValidationError(_("You cannot create recursive categories."))
+            raise ValidationError(_("You can't create recursive categories."))
 
     @api.ondelete(at_uninstall=False)
     def _unlink_disabled_if_product(self):
@@ -75,7 +75,7 @@ class ProductCategory(models.Model):
             if category.product_count > 0:
                 raise UserError(
                     _(
-                        "You cannot delete this category, "
+                        "You can't delete this category, "
                         "because it contains linked products."
                     )
                 )
