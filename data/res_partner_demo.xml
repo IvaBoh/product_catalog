@@ -1,61 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <data noupdate="0">
-        <!--
-         Resource: res.partner
-         -->
-        <record id="res_partner_100" model="res.partner">
-            <field name="name">New World</field>
-            <field eval="[Command.set([ref('base.res_partner_category_12')])]" name="category_id"/>
-            <field name="is_company">1</field>
-            <field name="street">1839 Arbor Way</field>
-            <field name="city">Turlock</field>
-            <field name="state_id" ref='base.state_us_5'/>
-            <field name="zip">95380</field>
-            <field name="country_id" ref="base.us"/>
-            <field name="email">new_worls@example.com</field>
-            <field name="phone">(623)-853-7197</field>
-            <field name="website">http://www.new-corner.com</field>
-            <field name="image_1920" type="base64" file="base/static/img/res_partner_1-image.png"/>
-        </record>
+<odoo noupdate="0">
 
-        <record id="res_partner_101" model="res.partner">
-            <field name="name">New Art Deco</field>
-            <field eval="[Command.set([ref('base.res_partner_category_14')])]" name="category_id"/>
-            <field name="is_company">1</field>
-            <field name="street">77 Barbara Rd</field>
-            <field name="city">Pleasant Hill</field>
-            <field name="state_id" ref='base.state_us_5'/>
-            <field name="zip">94523</field>
-            <field name="country_id" ref="base.us"/>
-            <field name="email">deco@example.com</field>
-            <field name="phone">(603)-996-3829</field>
-            <field name="website">http://www.deco.com</field>
-            <field name="image_1920" type="base64" file="base/static/img/res_partner_2-image.png"/>
-        </record>
+    <record id="res_partner_100" model="res.partner">
+        <field name="name">New World</field>
+        <field eval="[Command.set([ref('base.res_partner_category_12')])]" name="category_id"/>
+        <field name="is_company">1</field>
+        <field name="street">1839 Arbor Way</field>
+        <field name="city">Turlock</field>
+        <field name="state_id" ref='base.state_us_5'/>
+        <field name="zip">95380</field>
+        <field name="country_id" ref="base.us"/>
+        <field name="email">new_worls@example.com</field>
+        <field name="phone">(623)-853-7197</field>
+        <field name="website">http://www.new-corner.com</field>
+        <field name="image_1920" type="base64" file="base/static/img/res_partner_1-image.png"/>
+    </record>
+
+    <record id="res_partner_101" model="res.partner">
+        <field name="name">New Art Deco</field>
+        <field eval="[Command.set([ref('base.res_partner_category_14')])]" name="category_id"/>
+        <field name="is_company">1</field>
+        <field name="street">77 Barbara Rd</field>
+        <field name="city">Pleasant Hill</field>
+        <field name="state_id" ref='base.state_us_5'/>
+        <field name="zip">94523</field>
+        <field name="country_id" ref="base.us"/>
+        <field name="email">deco@example.com</field>
+        <field name="phone">(603)-996-3829</field>
+        <field name="website">http://www.deco.com</field>
+        <field name="image_1920" type="base64" file="base/static/img/res_partner_2-image.png"/>
+    </record>
 
 
-        <record id="res_partner_address_100" model="res.partner">
-            <field name="name">Lie Lie</field>
-            <field name="parent_id" ref="res_partner_100"/>
-            <field name="function">Service Manager</field>
-            <field name="email">willie.burke80@example.com</field>
-            <field name="phone">(846)-523-2111</field>
-        </record>
-        <record id="res_partner_address_101" model="res.partner">
-            <field name="name">Kwan Ju</field>
-            <field name="parent_id" ref="res_partner_100"/>
-            <field name="function">Store Manager</field>
-            <field name="email">ron.gibson76@example.com</field>
-            <field name="phone">(976)-397-4091</field>
-        </record>
-        <record id="res_partner_address_102" model="res.partner">
-            <field name="name">Jan Chen</field>
-            <field name="parent_id" ref="res_partner_101"/>
-            <field name="function">Functional Consultant</field>
-            <field name="email">douglas.fletcher51@example.com</field>
-            <field name="phone">(132)-553-7242</field>
-        </record>
+    <record id="res_partner_address_100" model="res.partner">
+        <field name="name">Lie Lie</field>
+        <field name="parent_id" ref="res_partner_100"/>
+        <field name="function">Service Manager</field>
+        <field name="email">willie.burke80@example.com</field>
+        <field name="phone">(846)-523-2111</field>
+    </record>
+    <record id="res_partner_address_101" model="res.partner">
+        <field name="name">Kwan Ju</field>
+        <field name="parent_id" ref="res_partner_100"/>
+        <field name="function">Store Manager</field>
+        <field name="email">ron.gibson76@example.com</field>
+        <field name="phone">(976)-397-4091</field>
+    </record>
+    <record id="res_partner_address_102" model="res.partner">
+        <field name="name">Jan Chen</field>
+        <field name="parent_id" ref="res_partner_101"/>
+        <field name="function">Functional Consultant</field>
+        <field name="email">douglas.fletcher51@example.com</field>
+        <field name="phone">(132)-553-7242</field>
+    </record>
 
-    </data>
 </odoo>

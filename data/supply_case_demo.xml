@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<odoo noupdate="0">
 
     <record id="supply_case_1" model="supply.case"
             forcecreate="True">

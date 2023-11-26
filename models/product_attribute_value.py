@@ -16,10 +16,8 @@ class ProductAttributeValue(models.Model):
         required=True,
         index=True,
         help=(
-            _(
-                "The attribute cannot be changed once "
-                "the value is used on at least one product."
-            )
+            "The attribute cannot be changed once "
+            "the value is used on at least one product."
         ),
     )
     product_ids = fields.Many2many(
@@ -44,18 +42,21 @@ class ProductAttributeValue(models.Model):
                 ):
                     raise UserError(
                         _(
-                            "You cannot change the attribute of the value %s "
-                            "because it is used on some products: %s, ..."
+                            "You cannot change the attribute "
+                            "of the value '%(attribute_name)s' "
+                            "because it is used on "
+                            "some products: %(product_list)s, ..."
                         )
-                        % (
-                            attribute_value.name,
-                            ", ".join(
+                        % {
+                            "attribute_name": attribute_value.name,
+                            "product_list": ", ".join(
                                 attribute_value.product_ids.search(
                                     [], limit=10
                                 ).mapped("name")
                             ),
-                        )
+                        }
                     )
+
         res = super().write(values)
         return res
 

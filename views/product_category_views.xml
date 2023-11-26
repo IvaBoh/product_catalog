@@ -40,6 +40,8 @@
             <search>
                 <field name="parent_id"/>
                 <field name="child_ids"/>
+                <filter name="desk_anc" string="Desks" domain="[('name', '=ilike', '%desk%')]"/>
+                <filter name="table_anc" string="Tables" domain="[('name', '=ilike', '%table%')]"/>
                 <searchpanel view_types="tree">
                     <field name="parent_id" hierarchize="1"
                            enable_counters="1"/>
