@@ -19,6 +19,7 @@ class ProductAttributeValue(models.Model):
             "The attribute cannot be changed once "
             "the value is used on at least one product."
         ),
+        ondelete="cascade",
     )
     product_ids = fields.Many2many(
         comodel_name="product.product",

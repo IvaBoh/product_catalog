@@ -4,6 +4,7 @@ from odoo.tests.common import TransactionCase
 class TestCommon(TransactionCase):
     def setUp(self):
         super(TestCommon, self).setUp()
+
         self.product_catalog_group_user = self.env.ref(
             "product_catalog.product_catalog_group_user"
         )
