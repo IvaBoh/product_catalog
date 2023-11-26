@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo noupdate="0">
 
-    <!--        <record id="product_catalog_rule_user" model="ir.rule">-->
-    <!--            <field name="name">User can't see individuals</field>-->
-    <!--            <field name="model_id" ref="model_res_partner"/>-->
-    <!--            <field name="domain_force">[('company_type', '!=', 'Individual')]</field>-->
-    <!--            <field name="groups" eval="[(4, ref('product_catalog_group_user'))]"/>-->
-    <!--            <field name="perm_read" eval="True"/>-->
-    <!--        </record>-->
+    <record id="product_catalog_rule_user" model="ir.rule" forcecreate="True">
+        <field name="name">Catalog users can only read and delete category records that were created by them</field>
+        <field name="model_id" ref="model_product_category"/>
+        <field name="domain_force">[('create_uid', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('product_catalog_group_user'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
 
-
-    <!--        <record id="product_catalog_rule_admin" model="ir.rule">-->
-    <!--            <field name="name">Administrators can see all</field>-->
-    <!--            <field name="model_id" ref="model_res_partner"/>-->
-    <!--            <field name="domain_force">[(1, '=', 1)]</field>-->
-    <!--            <field name="groups" eval="[(4, ref('product_catalog_group_admin'))]"/>-->
-    <!--        </record>-->
-
-    <!--        <record id="library_book_rule_trainee" model="ir.rule">-->
-    <!--            <field name="name">Category trainees can change only the records that were added during the past 30 days.</field>-->
-    <!--            <field name="model_id" ref="model_library_author"/>-->
-    <!--            <field name="domain_force">[('create_date', '>=', (context_today() - relativedelta(days=30)).strftime('%Y-%m-%d %H:%M:%S'))]</field>-->
-    <!--            <field name="groups" eval="[(4, ref('group_library_trainee'))]"/>-->
-    <!--            <field name="perm_write" eval="True"/>-->
-    <!--        </record>-->
+    <record id="product_catalog_rule_admin" model="ir.rule" forcecreate="True">
+        <field name="name">Catalog administrators have full rights on product_catalog model</field>
+        <field name="model_id" ref="model_product_category"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('product_catalog_group_admin'))]"/>
+    </record>
 
 </odoo>
